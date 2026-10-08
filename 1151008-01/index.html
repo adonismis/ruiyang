@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" href="images/hero/hero-1.jpg">
 </head>
 <body>
 
@@ -67,45 +68,59 @@
 
   <main>
     <!-- Hero -->
-    <section class="hero" aria-label="形象輪播">
-      <div class="hero-slide">
-        <div class="hero-bg bg-1"></div>
+    <section class="hero" aria-roledescription="carousel" aria-label="形象輪播">
+      <div class="hero-slide" aria-roledescription="slide" aria-label="1 / 3">
+        <div class="hero-bg" style="background-image: url('images/hero/hero-1.jpg');"></div>
         <div class="hero-pattern"></div>
-        <img class="hero-mark" src="images/logo-mark-white.png" alt="">
         <div class="container hero-content">
           <p class="hero-en">Ruiyang Electromechanical Engineering</p>
-          <h1 class="hero-title">專業機電工程<br>穩健永續經營</h1>
+          <h1 class="hero-title">專業機電工程<br><span>穩健永續經營</span></h1>
           <p class="hero-desc">睿洋機電工程有限公司，穩健發展，追求企業永續經營及成長，提供良好品質與專業態度。</p>
-          <div><a href="about.html" class="btn btn-white">了解更多</a></div>
+          <div class="hero-actions">
+            <a href="about.html" class="btn">了解更多</a>
+            <a href="contact.html" class="btn btn-white">聯絡我們</a>
+          </div>
         </div>
       </div>
-      <div class="hero-slide">
-        <div class="hero-bg bg-2"></div>
+      <div class="hero-slide" aria-roledescription="slide" aria-label="2 / 3">
+        <div class="hero-bg" style="background-image: url('images/hero/hero-2.jpg');"></div>
         <div class="hero-pattern"></div>
-        <img class="hero-mark" src="images/logo-mark-white.png" alt="">
         <div class="container hero-content">
           <p class="hero-en">HVAC・Ventilation・Insulation</p>
-          <h2 class="hero-title">冷凍空調・通風<br>保溫保冷工程</h2>
+          <h2 class="hero-title">冷凍空調・通風<br><span>保溫保冷工程</span></h2>
           <p class="hero-desc">從規劃、施工到維護，以專業團隊提供完善的冷凍通風空調系統與保溫保冷安裝服務。</p>
-          <div><a href="services.html" class="btn btn-white">營業項目</a></div>
+          <div class="hero-actions">
+            <a href="services.html" class="btn">營業項目</a>
+            <a href="projects.html" class="btn btn-white">營業實績</a>
+          </div>
         </div>
       </div>
-      <div class="hero-slide">
-        <div class="hero-bg bg-3"></div>
+      <div class="hero-slide" aria-roledescription="slide" aria-label="3 / 3">
+        <div class="hero-bg" style="background-image: url('images/hero/hero-3.jpg');"></div>
         <div class="hero-pattern"></div>
-        <img class="hero-mark" src="images/logo-mark-white.png" alt="">
         <div class="container hero-content">
           <p class="hero-en">Safety・Quality・Sustainability</p>
-          <h2 class="hero-title">安全第一<br>品質至上</h2>
+          <h2 class="hero-title">安全第一<br><span>品質至上</span></h2>
           <p class="hero-desc">重視施工人員安全防護與作業標準，以專業態度打造良好工程品質。</p>
-          <div><a href="esg.html" class="btn btn-white">永續發展</a></div>
+          <div class="hero-actions">
+            <a href="esg.html" class="btn">永續發展</a>
+            <a href="careers.html" class="btn btn-white">加入我們</a>
+          </div>
         </div>
       </div>
 
       <div class="hero-ctrl">
         <div class="container">
-          <div class="hero-num"><b>01</b> / 03</div>
-          <div class="hero-dots"></div>
+          <div class="hero-num"><b>01</b><span>/ 03</span></div>
+          <div class="hero-dots" role="tablist" aria-label="選擇輪播項目">
+            <button type="button" role="tab" aria-label="專業機電工程"><i></i><span>專業機電</span></button>
+            <button type="button" role="tab" aria-label="冷凍空調・通風"><i></i><span>空調通風</span></button>
+            <button type="button" role="tab" aria-label="安全第一 品質至上"><i></i><span>安全品質</span></button>
+          </div>
+          <div class="hero-arrows">
+            <button type="button" class="hero-prev" aria-label="上一張"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button type="button" class="hero-next" aria-label="下一張"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
         </div>
       </div>
       <div class="scroll-down">SCROLL</div>

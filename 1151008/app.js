@@ -1,5 +1,9 @@
+const fontStylesheet=document.createElement('link');fontStylesheet.rel='stylesheet';fontStylesheet.href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap';document.head.append(fontStylesheet);
 const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('#main-nav');
+const header=document.querySelector('.header');
+function updateHeader(){header.classList.toggle('is-scrolled',scrollY>20)}
+updateHeader();addEventListener('scroll',updateHeader,{passive:true});
 function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','開啟選單')}
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'關閉選單':'開啟選單')});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu()}});
