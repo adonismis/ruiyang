@@ -1,6 +1,74 @@
 (function () {
   'use strict';
 
+  function setupBrandIntro() {
+    var hero = document.querySelector('.hero');
+    if (!hero) return;
+    var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var activeIntro = null;
+
+    function playIntro() {
+      if (activeIntro || motion.matches) return;
+      var previousFocus = document.activeElement;
+      var intro = document.createElement('div');
+      intro.className = 'brand-intro';
+      intro.setAttribute('role', 'dialog');
+      intro.setAttribute('aria-modal', 'true');
+      intro.setAttribute('aria-label', '睿洋機電品牌開場');
+      intro.innerHTML = `
+        <div class="intro-identity">
+          <div class="intro-emblem" aria-hidden="true"><img src="images/logo-icon.png" alt="" width="261" height="400"></div>
+          <div class="intro-name">睿洋機電</div>
+          <div class="intro-english">RUIYANG ELECTROMECHANICAL</div>
+        </div>
+        <div class="intro-progress" aria-hidden="true"></div>
+        <button type="button" class="intro-skip">略過開場 <span aria-hidden="true">↗</span></button>`;
+      var background = Array.from(document.body.children).map(function (element) {
+        return [element, element.inert];
+      });
+      background.forEach(function (item) { item[0].inert = true; });
+      document.body.append(intro);
+      document.documentElement.classList.add('intro-playing');
+      var skip = intro.querySelector('.intro-skip');
+      skip.focus({ preventScroll: true });
+      var timer;
+
+      function finish() {
+        if (activeIntro !== finish) return;
+        activeIntro = null;
+        clearTimeout(timer);
+        document.removeEventListener('keydown', onKey);
+        window.removeEventListener('pagehide', finish);
+        motion.removeEventListener('change', finish);
+        background.forEach(function (item) { item[0].inert = item[1]; });
+        document.documentElement.classList.remove('intro-playing');
+        intro.remove();
+        if (previousFocus instanceof HTMLElement) previousFocus.focus({ preventScroll: true });
+      }
+      function onKey(event) {
+        if (event.key === 'Escape') finish();
+        if (event.key === 'Tab') { event.preventDefault(); skip.focus(); }
+      }
+      activeIntro = finish;
+      skip.addEventListener('click', finish);
+      document.addEventListener('keydown', onKey);
+      motion.addEventListener('change', finish);
+      intro.addEventListener('animationend', function (event) {
+        if (event.target === intro && event.animationName === 'intro-depart') finish();
+      });
+      timer = setTimeout(finish, 3600);
+      window.addEventListener('pagehide', finish, { once: true });
+    }
+    var replay = document.createElement('button');
+    replay.type = 'button';
+    replay.className = 'intro-replay';
+    replay.textContent = '重播開場 ↗';
+    replay.addEventListener('click', playIntro);
+    hero.querySelector('.hero-ctrl .container').append(replay);
+    if (!window.location.hash) playIntro();
+  }
+  setupBrandIntro();
+
   var header = document.querySelector('.header');
   var gotop = document.querySelector('.gotop');
 
