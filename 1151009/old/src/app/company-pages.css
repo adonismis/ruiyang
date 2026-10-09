@@ -1,0 +1,853 @@
+.company-section-nav {
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+.company-section-nav > .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 38px;
+}
+.company-section-nav a {
+  padding: 22px 0;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.company-section-nav a:hover {
+  color: var(--green-dark);
+  border-bottom-color: var(--green);
+}
+.company-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 90px;
+}
+.company-lead {
+  margin-top: 30px;
+  max-width: 540px;
+  font-size: 18px;
+  line-height: 2.1;
+  color: #58625e;
+}
+.company-founded {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-block: 34px;
+}
+.company-founded > span {
+  font-size: 12px;
+  color: var(--green-dark);
+  font-weight: 600;
+}
+.company-founded strong {
+  font-size: clamp(52px, 5.5vw, 78px);
+  letter-spacing: -0.07em;
+  color: var(--green-dark);
+  font-weight: 500;
+  line-height: 1;
+}
+.company-founded > p {
+  font-size: 12px;
+  margin-left: 22px;
+  color: var(--muted);
+}
+.company-intro-photo {
+  position: relative;
+  aspect-ratio: 1.12;
+  overflow: hidden;
+}
+.company-intro-photo img {
+  width: 100%;
+  height: 100%;
+  object-position: 50% 48%;
+}
+.company-intro-photo figcaption,
+.career-intro-photo figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 12px 18px;
+  background: linear-gradient(transparent, #142522bb);
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.025em;
+  text-align: right;
+}
+.company-facts-wrap {
+  margin-top: 64px;
+}
+.company-facts {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+  margin: 0;
+  border-block: 1px solid var(--line);
+  padding-block: 28px;
+  gap: 28px;
+}
+.company-facts > div + div {
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+}
+.company-facts dt {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.company-facts dd {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.company-data-note {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+.company-paper-section {
+  background: var(--paper);
+}
+.company-aside-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr;
+  align-items: start;
+  gap: 80px;
+}
+.company-aside-grid > :last-child {
+  min-width: 0;
+}
+.company-person-card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  border: 1px solid var(--line);
+}
+.company-person-symbol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 235px;
+  color: #778780;
+  background: var(--paper);
+}
+.company-person-symbol svg {
+  width: 44px;
+  height: 44px;
+}
+.company-person-symbol span {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+.company-person-copy {
+  padding: 32px;
+}
+.company-label {
+  display: block;
+  color: var(--green-dark);
+  font-size: 10px;
+  line-height: 1.7;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+.company-person-copy h3 {
+  font-size: 28px;
+  margin: 12px 0;
+  font-weight: 550;
+}
+.company-person-copy p {
+  font-size: 12px;
+  color: var(--muted);
+}
+.company-muted {
+  color: var(--muted);
+}
+.company-person-copy .company-muted {
+  margin-top: 20px;
+}
+.company-office-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 44px;
+}
+.company-office-card {
+  background: #fff;
+  padding: 36px 42px;
+  border-top: 2px solid var(--green);
+}
+.company-office-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  color: var(--green-dark);
+}
+.company-office-top svg {
+  width: 30px;
+  height: 30px;
+}
+.company-office-top > span {
+  color: #cbd3ce;
+  font-size: 15px;
+}
+.company-office-card h3 {
+  margin-top: 8px;
+  font-size: 26px;
+  font-weight: 550;
+}
+.company-office-card address {
+  font-style: normal;
+  font-size: 14px;
+  margin-top: 24px;
+}
+.company-office-card .text-link {
+  margin-top: 30px;
+  gap: 50px;
+}
+.company-section-action {
+  margin-top: 30px;
+}
+.company-section-body {
+  margin-top: 38px;
+}
+.company-timeline {
+  list-style: none;
+  padding: 8px 0 60px 30px;
+  margin: 0 0 0 9px;
+  border-left: 1px solid #cad5ce;
+}
+.company-timeline li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  position: relative;
+  gap: 20px;
+}
+.company-timeline-dot {
+  position: absolute;
+  left: -36px;
+  top: 20px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 6px var(--paper);
+}
+.company-timeline time {
+  font-size: 42px;
+  color: var(--green-dark);
+  letter-spacing: -0.04em;
+  line-height: 1.3;
+}
+.company-timeline h3 {
+  font-size: 20px;
+  font-weight: 550;
+  padding-top: 12px;
+}
+.company-timeline p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+.company-certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+.company-certificate-card {
+  border: 1px solid var(--line);
+  padding: 24px;
+}
+.company-certificate-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  background: var(--paper);
+  margin-bottom: 24px;
+}
+.company-certificate-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.company-certificate-card p {
+  font-size: 13px;
+  color: var(--muted);
+}
+.policy-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: end;
+}
+.policy-intro > p {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--muted);
+  max-width: 440px;
+}
+.policy-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 55px;
+}
+.policy-card {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 30px 26px;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--green);
+  background: var(--paper);
+  transition:
+    background 0.25s,
+    border-color 0.25s;
+}
+.policy-card:hover {
+  background: #eaf1ec;
+  border-color: #94bba1;
+}
+.policy-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 44px;
+}
+.policy-card-top svg {
+  color: var(--green-dark);
+  width: 42px;
+  height: 42px;
+}
+.policy-card-top > span {
+  color: #84968b;
+  font-size: 12px;
+}
+.policy-card h2 {
+  font-size: 24px;
+  margin-top: 12px;
+  letter-spacing: 0.01em;
+}
+.policy-card-description {
+  font-size: 14px;
+  line-height: 2;
+  color: var(--muted);
+  margin-top: 18px;
+  margin-bottom: 38px;
+}
+.policy-card-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid #d4ddd6;
+  color: var(--green-dark);
+  font-size: 13px;
+}
+.policy-card-action svg {
+  width: 20px;
+  height: 20px;
+}
+.policy-statement {
+  padding: 86px 0;
+  background: var(--ink);
+  color: #fff;
+}
+.policy-statement > .container {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.policy-statement > .container > p {
+  font-size: clamp(26px, 4.6vw, 66px);
+  line-height: 1.22;
+  letter-spacing: -0.045em;
+  font-weight: 550;
+}
+.policy-statement > .container > p > span {
+  color: #8faea0;
+}
+.policy-statement .company-label {
+  color: #a6bcb1;
+}
+.policy-statement h2 {
+  font-size: 32px;
+  line-height: 1.65;
+  margin-top: 20px;
+}
+.policy-statement .button {
+  margin-top: 28px;
+}
+.policy-detail-grid {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 85px;
+}
+.policy-side-nav {
+  position: sticky;
+  top: calc(var(--header-height) + 36px);
+  align-self: start;
+}
+.policy-side-nav nav {
+  margin-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.policy-side-nav nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 14px;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.policy-side-nav nav a[aria-current="page"] {
+  background: var(--green-dark);
+  color: #fff;
+  border-color: var(--green-dark);
+}
+.policy-side-nav nav a:not([aria-current]):hover {
+  background: var(--paper);
+  color: var(--green-dark);
+}
+.policy-side-nav nav svg {
+  width: 18px;
+  height: 18px;
+}
+.policy-side-nav > .text-link {
+  margin-top: 22px;
+  gap: 28px;
+  font-size: 12px;
+}
+.policy-article-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.policy-article-heading > svg {
+  width: 40px;
+  height: 40px;
+  color: var(--green-dark);
+}
+.policy-article-heading h2 {
+  font-size: 30px;
+}
+.policy-article .content-notice p {
+  margin-top: 8px;
+}
+.policy-topics {
+  margin-top: 40px;
+}
+.policy-topics section {
+  display: grid;
+  grid-template-columns: 35px minmax(0, 1fr);
+  gap: 18px;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+}
+.policy-topics section > span {
+  color: var(--green-dark);
+  font-size: 12px;
+  padding-top: 6px;
+}
+.policy-topics h3 {
+  font-size: 21px;
+  font-weight: 550;
+}
+.policy-topics p {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 2;
+  color: var(--muted);
+}
+.policy-published-copy p {
+  margin-bottom: 24px;
+  line-height: 2;
+}
+.career-intro-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 85px;
+}
+.career-intro-photo {
+  position: relative;
+  aspect-ratio: 1.05;
+  overflow: hidden;
+}
+.career-intro-photo img {
+  width: 100%;
+  height: 100%;
+}
+.career-training {
+  border-top: 1px solid var(--line);
+  margin-top: 30px;
+  padding-top: 24px;
+}
+.career-training h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.career-training p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 10px;
+}
+.career-intro-copy > .text-link {
+  margin-top: 28px;
+}
+.career-openings-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.career-openings-heading > p {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  color: var(--green-dark);
+}
+.career-openings-heading > p strong {
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 450;
+  letter-spacing: -0.06em;
+}
+.career-openings-heading > p span {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.career-jobs {
+  margin-top: 38px;
+  border-top: 1px solid var(--line);
+}
+.career-job {
+  border-bottom: 1px solid var(--line);
+}
+.career-job summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+  padding: 30px 24px;
+  cursor: pointer;
+  list-style: none;
+}
+.career-job summary::-webkit-details-marker {
+  display: none;
+}
+.career-job summary:hover {
+  background: var(--paper);
+}
+.career-job summary h3 {
+  font-size: 23px;
+  margin-top: 7px;
+}
+.career-job summary .career-job-toggle {
+  font-size: 26px;
+  color: var(--green-dark);
+}
+.career-job[open] .career-job-toggle {
+  transform: rotate(45deg);
+}
+.career-job-details {
+  padding: 0 30px 35px;
+}
+.career-job-details > section {
+  margin-top: 24px;
+}
+.career-job-details h4 {
+  font-size: 15px;
+  margin: 0 0 10px;
+}
+.career-job-details ul {
+  padding-left: 22px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.career-job-details p {
+  font-size: 14px;
+  color: var(--muted);
+}
+.career-job-details .button {
+  margin-top: 20px;
+}
+@media (max-width: 1100px) {
+  .company-intro-grid,
+  .career-intro-grid {
+    gap: 45px;
+  }
+  .company-aside-grid {
+    gap: 45px;
+    grid-template-columns: 0.9fr 1.25fr;
+  }
+  .company-facts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .company-facts > div:nth-child(3) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .company-person-card {
+    grid-template-columns: 115px 1fr;
+  }
+  .company-person-copy {
+    padding: 25px;
+  }
+  .policy-intro {
+    gap: 35px;
+  }
+  .policy-card-grid {
+    gap: 18px;
+  }
+  .policy-card {
+    padding-inline: 23px;
+  }
+  .policy-card h2 {
+    font-size: 21px;
+  }
+  .policy-detail-grid {
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .company-section-nav > .container {
+    gap: 0 24px;
+  }
+  .company-section-nav a {
+    font-size: 12px;
+    padding: 16px 0;
+  }
+  .company-intro-grid,
+  .company-aside-grid,
+  .career-intro-grid,
+  .policy-intro,
+  .policy-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .company-lead {
+    font-size: 16px;
+  }
+  .company-founded {
+    margin-block: 26px;
+  }
+  .company-intro-photo {
+    aspect-ratio: 1.35;
+  }
+  .company-facts-wrap {
+    margin-top: 36px;
+  }
+  .company-facts {
+    padding-block: 22px;
+    gap: 24px 20px;
+  }
+  .company-facts > div + div {
+    padding-left: 20px;
+  }
+  .company-facts dd {
+    font-size: 13px;
+  }
+  .company-office-card {
+    padding: 30px 25px;
+  }
+  .company-office-grid {
+    margin-top: 30px;
+    gap: 20px;
+  }
+  .company-office-card h3 {
+    font-size: 23px;
+  }
+  .company-office-card address {
+    font-size: 13px;
+  }
+  .company-office-card .text-link {
+    gap: 20px;
+    font-size: 12px;
+  }
+  .company-timeline {
+    padding-bottom: 28px;
+  }
+  .company-timeline li {
+    grid-template-columns: 100px 1fr;
+  }
+  .company-timeline time {
+    font-size: 36px;
+  }
+  .company-timeline h3 {
+    font-size: 18px;
+  }
+  .company-certificate-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .policy-card-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 36px;
+  }
+  .policy-card {
+    padding: 28px;
+  }
+  .policy-card-top {
+    margin-bottom: 25px;
+  }
+  .policy-card h2 {
+    font-size: 24px;
+  }
+  .policy-card-description {
+    margin-bottom: 28px;
+  }
+  .policy-statement {
+    padding-block: 60px;
+  }
+  .policy-statement > .container {
+    gap: 30px;
+  }
+  .policy-statement h2 {
+    font-size: 26px;
+  }
+  .policy-statement .company-label {
+    font-size: 8px;
+  }
+  .policy-statement .button {
+    padding-inline: 20px;
+    gap: 25px;
+    font-size: 12px;
+  }
+  .policy-side-nav {
+    position: static;
+  }
+  .policy-side-nav nav {
+    display: flex;
+  }
+  .policy-side-nav nav a {
+    flex: 1;
+    font-size: 12px;
+    gap: 8px;
+    padding: 16px 12px;
+  }
+  .policy-side-nav nav a > svg {
+    display: none;
+  }
+  .policy-side-nav > .text-link {
+    margin-top: 10px;
+  }
+  .policy-article-heading h2 {
+    font-size: 26px;
+  }
+  .policy-topics h3 {
+    font-size: 19px;
+  }
+  .career-intro-photo {
+    aspect-ratio: 1.4;
+  }
+  .career-intro-copy {
+    grid-row: 1;
+  }
+  .career-openings-heading > p strong {
+    font-size: 42px;
+  }
+}
+@media (max-width: 520px) {
+  .company-section-nav > .container {
+    gap: 0 21px;
+  }
+  .company-section-nav a {
+    font-size: 11px;
+    padding: 13px 0;
+  }
+  .company-person-card {
+    grid-template-columns: 82px 1fr;
+  }
+  .company-person-copy {
+    padding: 24px 20px;
+  }
+  .company-person-symbol span {
+    font-size: 7px;
+  }
+  .company-person-symbol svg {
+    width: 30px;
+    height: 30px;
+  }
+  .company-office-grid,
+  .company-certificate-grid {
+    grid-template-columns: 1fr;
+  }
+  .company-timeline li {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .company-timeline h3 {
+    padding-top: 0;
+  }
+  .company-timeline p {
+    margin-top: 10px;
+  }
+  .company-timeline-dot {
+    top: 16px;
+  }
+  .policy-statement > .container {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .policy-statement > .container > p {
+    font-size: clamp(25px, 8.5vw, 40px);
+  }
+  .policy-statement h2 {
+    font-size: 28px;
+  }
+  .policy-side-nav nav a {
+    font-size: 11px;
+    padding: 14px 9px;
+  }
+  .policy-article-heading {
+    gap: 13px;
+  }
+  .policy-article-heading > svg {
+    width: 30px;
+    height: 30px;
+  }
+  .policy-article-heading h2 {
+    font-size: 24px;
+  }
+  .policy-topics section {
+    grid-template-columns: 25px minmax(0, 1fr);
+    gap: 12px;
+  }
+  .career-openings-heading {
+    align-items: start;
+    gap: 12px;
+  }
+  .career-openings-heading > p {
+    flex-direction: column;
+    gap: 9px;
+    padding-top: 4px;
+  }
+  .career-openings-heading > p strong {
+    font-size: 35px;
+  }
+  .career-openings-heading > p span {
+    font-size: 10px;
+  }
+  .career-job summary {
+    padding-inline: 15px;
+  }
+  .career-job-details {
+    padding-inline: 15px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .company-section-nav a,
+  .policy-card {
+    transition: none;
+  }
+}
