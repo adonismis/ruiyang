@@ -1,6 +1,6 @@
 "use strict";
 
-// All three homepage versions load this shared, decorative brand opening.
+// Homepage versions share this decorative brand opening.
 document.addEventListener("DOMContentLoaded", () => {
   const hero = document.querySelector(".hero, .hero-section");
   const logo = document.querySelector(".site-header img");

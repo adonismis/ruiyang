@@ -136,7 +136,7 @@
     };
 
     const syncPlaying = () => {
-      const playing = !reduceMotion.matches && !userPaused;
+      const playing = !reduceMotion.matches && !userPaused && !document.documentElement.classList.contains("brand-intro-playing");
       root.classList.toggle("is-playing", playing);
       surface.setAttribute("aria-live", playing ? "off" : "polite");
       if (toggleBtn) toggleBtn.setAttribute("aria-label", playing ? "暫停自動輪播" : "開始自動輪播");
@@ -197,6 +197,7 @@
     });
 
     reduceMotion.addEventListener("change", syncPlaying);
+    document.addEventListener("brandintrochange", syncPlaying);
     render();
     syncPlaying();
   }
