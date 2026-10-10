@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a64b8"/>
+      <stop offset=".6" stop-color="#0a3b78"/>
+      <stop offset="1" stop-color="#061a33"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#5fd3f3" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#5fd3f3" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" stroke="#fff" stroke-opacity=".06"/>
+    </pattern>
+    <linearGradient id="gear" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6cbcf8"/>
+      <stop offset=".55" stop-color="#1b7ad6"/>
+      <stop offset="1" stop-color="#0a468f"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .gear{transform-origin:150px 148px;animation:spin 40s linear infinite}
+    .trace{stroke-dasharray:6 10;animation:flow 2s linear infinite}
+    .tw{animation:tw 3s ease-in-out infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes flow{to{stroke-dashoffset:-32}}
+    @keyframes tw{0%,100%{opacity:.2}50%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+  <rect width="300" height="400" fill="url(#bg)"/>
+  <rect width="300" height="400" fill="url(#grid)"/>
+  <g transform="translate(150 100) scale(.85) translate(-150 -148)">
+  <circle cx="150" cy="148" r="150" fill="url(#glow)"/>
+
+  <g stroke="#9ddcff" stroke-opacity=".6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path class="trace" d="M62 148H30L14 164V232"/>
+    <path class="trace" d="M238 148H270L286 132V70" style="animation-delay:-.6s"/>
+    <path class="trace" d="M150 226V262L168 280H240" style="animation-delay:-1.2s"/>
+    <path class="trace" d="M108 82L86 60H40" style="animation-delay:-.3s"/>
+  </g>
+  <g fill="#5fd3f3">
+    <circle cx="14" cy="236" r="4"/><circle cx="286" cy="66" r="4"/><circle cx="244" cy="280" r="4"/><circle cx="36" cy="60" r="4"/>
+  </g>
+
+  <g class="gear">
+    <g transform="translate(150 148) scale(1.12)">
+      <path d="M-11.6 -60.9L-8.3 -77.6L8.3 -77.6L11.6 -60.9A62 62 0 0 1 26.4 -56.1L38.9 -67.6L52.3 -57.9L45.2 -42.4A62 62 0 0 1 54.3 -29.9L71.2 -31.9L76.3 -16.1L61.5 -7.8A62 62 0 0 1 61.5 7.8L76.3 16.1L71.2 31.9L54.3 29.9A62 62 0 0 1 45.2 42.4L52.3 57.9L38.9 67.6L26.4 56.1A62 62 0 0 1 11.6 60.9L8.3 77.6L-8.3 77.6L-11.6 60.9A62 62 0 0 1 -26.4 56.1L-38.9 67.6L-52.3 57.9L-45.2 42.4A62 62 0 0 1 -54.3 29.9L-71.2 31.9L-76.3 16.1L-61.5 7.8A62 62 0 0 1 -61.5 -7.8L-76.3 -16.1L-71.2 -31.9L-54.3 -29.9A62 62 0 0 1 -45.2 -42.4L-52.3 -57.9L-38.9 -67.6L-26.4 -56.1A62 62 0 0 1 -11.6 -60.9Z" fill="url(#gear)" stroke="#bfe9ff" stroke-opacity=".8" stroke-width="2.5" stroke-linejoin="round"/>
+      <circle r="44" stroke="#fff" stroke-opacity=".3" stroke-width="2"/>
+    </g>
+  </g>
+  <g transform="translate(150 148)">
+    <circle r="36" fill="#0a2f5e" stroke="#bfe9ff" stroke-opacity=".8" stroke-width="3"/>
+    <path transform="scale(1.1)" d="M4 -24L-14 3H-2L-6 24L14 -4H2Z" fill="#ffc94d"/>
+  </g>
+  <circle class="tw" cx="262" cy="214" r="2.5" fill="#d9f1ff"/>
+  <circle class="tw" cx="66" cy="262" r="2" fill="#d9f1ff" style="animation-delay:-1s"/>
+  <circle class="tw" cx="196" cy="36" r="2.5" fill="#d9f1ff" style="animation-delay:-2s"/>
+  </g>
+</svg>

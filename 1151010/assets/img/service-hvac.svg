@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f62b8"/>
+      <stop offset=".6" stop-color="#0a3a72"/>
+      <stop offset="1" stop-color="#061a33"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#5fd3f3" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#5fd3f3" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" stroke="#fff" stroke-opacity=".06"/>
+    </pattern>
+  </defs>
+  <style>
+    .orbit{transform-origin:150px 148px;animation:spin 80s linear infinite}
+    .snow{animation:spin 48s linear infinite}
+    .tw{animation:tw 3s ease-in-out infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes tw{0%,100%{opacity:.2}50%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+  <rect width="300" height="400" fill="url(#bg)"/>
+  <rect width="300" height="400" fill="url(#grid)"/>
+  <g transform="translate(150 100) scale(.85) translate(-150 -148)">
+  <circle cx="150" cy="148" r="150" fill="url(#glow)"/>
+  <circle class="orbit" cx="150" cy="148" r="126" stroke="#9ddcff" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="2 9"/>
+  <circle cx="150" cy="148" r="102" stroke="#fff" stroke-opacity=".12"/>
+  <g transform="translate(150 148) scale(1.3)">
+    <g class="snow" stroke="#d9f1ff" stroke-width="4.2" stroke-linecap="round">
+      <path d="M0 0L0 -70M0 -31.5L-14.1 -45.6M0 -31.5L14.1 -45.6M0 -49L-9.2 -58.2M0 -49L9.2 -58.2M0 0L60.6 -35M27.3 -15.7L32.5 -35.1M27.3 -15.7L46.6 -10.6M42.4 -24.5L45.8 -37.1M42.4 -24.5L55 -21.1M0 0L60.6 35M27.3 15.7L46.6 10.6M27.3 15.7L32.5 35.1M42.4 24.5L55 21.1M42.4 24.5L45.8 37.1M0 0L0 70M0 31.5L14.1 45.6M0 31.5L-14.1 45.6M0 49L9.2 58.2M0 49L-9.2 58.2M0 0L-60.6 35M-27.3 15.7L-32.5 35.1M-27.3 15.7L-46.6 10.6M-42.4 24.5L-45.8 37.1M-42.4 24.5L-55 21.1M0 0L-60.6 -35M-27.3 -15.8L-46.6 -10.6M-27.3 -15.8L-32.5 -35.1M-42.4 -24.5L-55 -21.1M-42.4 -24.5L-45.8 -37.1"/>
+    </g>
+  </g>
+  <circle class="tw" cx="44" cy="60" r="2.5" fill="#d9f1ff"/>
+  <circle class="tw" cx="262" cy="84" r="2" fill="#d9f1ff" style="animation-delay:-1s"/>
+  <circle class="tw" cx="246" cy="250" r="2.5" fill="#d9f1ff" style="animation-delay:-2s"/>
+  <circle class="tw" cx="52" cy="238" r="2" fill="#d9f1ff" style="animation-delay:-1.5s"/>
+  </g>
+</svg>

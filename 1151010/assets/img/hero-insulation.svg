@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 460" fill="none" aria-hidden="true">
+  <defs>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#1c8cf0" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#1c8cf0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#58b4f7"/>
+      <stop offset=".5" stop-color="#1a78d4"/>
+      <stop offset="1" stop-color="#0b4f9c"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1f9ff"/>
+      <stop offset=".55" stop-color="#a9cdee"/>
+      <stop offset="1" stop-color="#5d8fc2"/>
+    </linearGradient>
+    <radialGradient id="fluid" cx=".4" cy=".35" r=".8">
+      <stop offset="0" stop-color="#a6ecff"/>
+      <stop offset=".6" stop-color="#34b4f0"/>
+      <stop offset="1" stop-color="#0f78d0"/>
+    </radialGradient>
+    <pattern id="cells" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="6" r="2.6" fill="#bfe9ff" fill-opacity=".55"/>
+      <circle cx="18" cy="4" r="1.6" fill="#bfe9ff" fill-opacity=".4"/>
+      <circle cx="12" cy="15" r="3.2" fill="#bfe9ff" fill-opacity=".5"/>
+      <circle cx="23" cy="17" r="2" fill="#bfe9ff" fill-opacity=".45"/>
+      <circle cx="4" cy="22" r="1.8" fill="#bfe9ff" fill-opacity=".4"/>
+      <circle cx="16" cy="24" r="1.4" fill="#bfe9ff" fill-opacity=".35"/>
+    </pattern>
+    <clipPath id="fc"><circle r="84"/></clipPath>
+  </defs>
+  <style>
+    .orbit{transform-origin:260px 226px;animation:spin 90s linear infinite}
+    .snow{animation:spin 36s linear infinite}
+    .wave{animation:wave 3.6s linear infinite}
+    .push{animation:push 2.4s ease-in-out infinite}
+    .float{animation:bob 6s ease-in-out infinite}
+    .d2{animation-delay:-3s}
+    .tw{animation:tw 3s ease-in-out infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes wave{to{transform:translateX(42px)}}
+    @keyframes push{0%,100%{transform:translateX(0);opacity:1}55%{transform:translateX(-9px);opacity:.45}}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+    @keyframes tw{0%,100%{opacity:.2}50%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+
+  <circle cx="260" cy="226" r="228" fill="url(#glow)"/>
+  <circle class="orbit" cx="260" cy="226" r="210" stroke="#5fd3f3" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="2 10"/>
+
+  <g transform="translate(260 226)">
+    <g stroke="#ff9d5c" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+      <g transform="rotate(205)"><g class="push"><path d="M222 0H190"/><path d="M200 -8L189 0L200 8"/></g></g>
+      <g transform="rotate(332)"><g class="push" style="animation-delay:-.8s"><path d="M222 0H190"/><path d="M200 -8L189 0L200 8"/></g></g>
+      <g transform="rotate(88)"><g class="push" style="animation-delay:-1.6s"><path d="M222 0H190"/><path d="M200 -8L189 0L200 8"/></g></g>
+    </g>
+
+    <circle r="172" fill="url(#jacket)" stroke="#bfe9ff" stroke-opacity=".6" stroke-width="2"/>
+    <circle r="152" fill="#0a2f5e"/>
+    <circle r="152" fill="url(#cells)"/>
+    <circle r="152" stroke="#8fd6ff" stroke-opacity=".55" stroke-width="2"/>
+    <circle r="100" fill="url(#silver)" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>
+    <circle r="84" fill="url(#fluid)"/>
+    <g clip-path="url(#fc)" stroke="#fff" stroke-opacity=".38" stroke-width="2.6" stroke-linecap="round">
+      <g class="wave">
+        <path d="M-170 -34q10.5 -10 21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0"/>
+        <path d="M-170 34q10.5 -10 21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0t21 0"/>
+      </g>
+    </g>
+    <g class="snow">
+      <g transform="scale(1.1)" stroke="#fff" stroke-width="4.2" stroke-linecap="round">
+        <path d="M0 0L0 -40M0 -18L-7.8 -25.8M0 -18L7.8 -25.8M0 -28L-4.9 -32.9M0 -28L4.9 -32.9M0 0L34.6 -20M15.6 -9L18.4 -19.6M15.6 -9L26.2 -6.2M24.2 -14L26.1 -20.8M24.2 -14L31 -12.2M0 0L34.6 20M15.6 9L26.2 6.2M15.6 9L18.4 19.6M24.2 14L31 12.2M24.2 14L26.1 20.8M0 0L0 40M0 18L7.8 25.8M0 18L-7.8 25.8M0 28L4.9 32.9M0 28L-4.9 32.9M0 0L-34.6 20M-15.6 9L-18.4 19.6M-15.6 9L-26.2 6.2M-24.2 14L-26.1 20.8M-24.2 14L-31 12.2M0 0L-34.6 -20M-15.6 -9L-26.2 -6.2M-15.6 -9L-18.4 -19.6M-24.2 -14L-31 -12.2M-24.2 -14L-26.1 -20.8"/>
+      </g>
+    </g>
+  </g>
+
+  <g class="float">
+    <rect x="40" y="52" width="72" height="72" rx="18" fill="#0a2d57" fill-opacity=".92" stroke="#5fd3f3" stroke-opacity=".55"/>
+    <path transform="translate(76 90)" d="M0 -26C14 -8 22 2 22 12A22 22 0 0 1 -22 12C-22 2 -14 -8 0 -26Z" fill="#5fd3f3" fill-opacity=".28" stroke="#bfe9ff" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+  <g class="float d2">
+    <rect x="410" y="340" width="72" height="72" rx="18" fill="#0a2d57" fill-opacity=".92" stroke="#5fd3f3" stroke-opacity=".55"/>
+    <g transform="translate(446 376)" stroke="#bfe9ff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M-6 -26a6 6 0 0 1 12 0V6a14 14 0 1 1 -12 0Z" fill="#0a2d57"/>
+      <path d="M0 -12V8" stroke="#5fd3f3" stroke-width="4"/>
+      <circle cy="12" r="6" fill="#5fd3f3" stroke="none"/>
+    </g>
+  </g>
+
+  <circle class="tw" cx="448" cy="86" r="2.5" fill="#bfe9ff"/>
+  <circle class="tw" cx="62" cy="262" r="2" fill="#bfe9ff" style="animation-delay:-1s"/>
+  <circle class="tw" cx="120" cy="420" r="2.5" fill="#bfe9ff" style="animation-delay:-2s"/>
+  <circle class="tw" cx="486" cy="226" r="2" fill="#bfe9ff" style="animation-delay:-1.5s"/>
+</svg>

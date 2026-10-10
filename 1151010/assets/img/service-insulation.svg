@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1550b5"/>
+      <stop offset=".6" stop-color="#0b2f6e"/>
+      <stop offset="1" stop-color="#061a33"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#5fd3f3" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#5fd3f3" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" stroke="#fff" stroke-opacity=".06"/>
+    </pattern>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6cbcf8"/>
+      <stop offset=".35" stop-color="#2a82dc"/>
+      <stop offset="1" stop-color="#0a3f82"/>
+    </linearGradient>
+    <pattern id="wrap" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <path d="M0 0V22" stroke="#fff" stroke-opacity=".28" stroke-width="3"/>
+    </pattern>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1f9ff"/>
+      <stop offset="1" stop-color="#7fa9d6"/>
+    </linearGradient>
+    <radialGradient id="fluid" cx=".4" cy=".35" r=".8">
+      <stop offset="0" stop-color="#a6ecff"/>
+      <stop offset="1" stop-color="#1c8cf0"/>
+    </radialGradient>
+  </defs>
+  <style>
+    .tw{animation:tw 3s ease-in-out infinite}
+    @keyframes tw{0%,100%{opacity:.2}50%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+  <rect width="300" height="400" fill="url(#bg)"/>
+  <rect width="300" height="400" fill="url(#grid)"/>
+  <g transform="translate(150 100) scale(.85) translate(-150 -148)">
+  <circle cx="150" cy="148" r="150" fill="url(#glow)"/>
+
+  <g>
+    <rect x="-20" y="84" width="236" height="128" fill="url(#body)"/>
+    <rect x="-20" y="84" width="236" height="128" fill="url(#wrap)"/>
+    <rect x="-20" y="84" width="236" height="14" fill="#fff" fill-opacity=".18"/>
+    <rect x="86" y="80" width="14" height="136" rx="3" fill="#0a3f82" stroke="#bfe9ff" stroke-opacity=".6"/>
+    <rect x="-20" y="196" width="236" height="16" fill="#041a3a" fill-opacity=".35"/>
+    <ellipse cx="216" cy="148" rx="36" ry="64" fill="#0b4f9c" stroke="#bfe9ff" stroke-opacity=".7" stroke-width="2"/>
+    <ellipse cx="216" cy="148" rx="29" ry="52" fill="#0a2f5e"/>
+    <ellipse cx="216" cy="148" rx="29" ry="52" fill="#bfe9ff" fill-opacity=".28"/>
+    <ellipse cx="216" cy="148" rx="19" ry="34" fill="url(#silver)"/>
+    <ellipse cx="216" cy="148" rx="13" ry="24" fill="url(#fluid)"/>
+  </g>
+  <g transform="translate(250 56) scale(.5)" stroke="#d9f1ff" stroke-width="5" stroke-linecap="round">
+    <path d="M0 0L0 -40M0 -18L-7.8 -25.8M0 -18L7.8 -25.8M0 0L34.6 -20M15.6 -9L18.4 -19.6M15.6 -9L26.2 -6.2M0 0L34.6 20M15.6 9L26.2 6.2M15.6 9L18.4 19.6M0 0L0 40M0 18L7.8 25.8M0 18L-7.8 25.8M0 0L-34.6 20M-15.6 9L-18.4 19.6M-15.6 9L-26.2 6.2M0 0L-34.6 -20M-15.6 -9L-26.2 -6.2M-15.6 -9L-18.4 -19.6"/>
+  </g>
+  <circle class="tw" cx="44" cy="44" r="2.5" fill="#d9f1ff"/>
+  <circle class="tw" cx="40" cy="250" r="2" fill="#d9f1ff" style="animation-delay:-1s"/>
+  <circle class="tw" cx="262" cy="250" r="2.5" fill="#d9f1ff" style="animation-delay:-2s"/>
+  </g>
+</svg>
