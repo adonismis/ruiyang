@@ -89,6 +89,7 @@ function initHeroSlider() {
 
   function startAutoPlay() {
     stopAutoPlay();
+    if (document.documentElement.classList.contains('brand-intro-playing')) return;
     slideTimer = setInterval(nextSlide, intervalTime);
   }
 
@@ -125,6 +126,7 @@ function initHeroSlider() {
     heroSection.addEventListener('mouseenter', stopAutoPlay);
     heroSection.addEventListener('mouseleave', startAutoPlay);
   }
+  document.addEventListener('brandintrochange', startAutoPlay);
 
   // 觸控手勢滑動支援 (Touch gestures)
   let touchStartX = 0;
@@ -295,4 +297,3 @@ function initBackToTop() {
     });
   });
 }
-

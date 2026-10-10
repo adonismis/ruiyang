@@ -55,7 +55,7 @@ function updateCarousel() {
   window.clearInterval(carouselTimer);
   pauseButton.setAttribute("aria-label", paused ? "播放自動輪播" : "暫停自動輪播");
   pauseButton.firstElementChild.textContent = paused ? "▷" : "Ⅱ";
-  if (!paused && !document.hidden && !hero.matches(":hover") && !hero.contains(document.activeElement)) {
+  if (!paused && !document.hidden && !document.documentElement.classList.contains("brand-intro-playing") && !hero.matches(":hover") && !hero.contains(document.activeElement)) {
     carouselTimer = window.setInterval(() => showSlide((activeSlide + 1) % slides.length), 7000);
   }
 }
@@ -73,6 +73,7 @@ hero.addEventListener("mouseleave", updateCarousel);
 hero.addEventListener("focusin", updateCarousel);
 hero.addEventListener("focusout", () => window.setTimeout(updateCarousel, 0));
 document.addEventListener("visibilitychange", updateCarousel);
+document.addEventListener("brandintrochange", updateCarousel);
 reducedMotion.addEventListener("change", (event) => {
   paused = event.matches;
   updateCarousel();

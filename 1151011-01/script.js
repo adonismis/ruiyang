@@ -55,7 +55,7 @@ function showSlide(index) {
 
 function syncCarousel() {
   window.clearInterval(carouselTimer);
-  if (paused || document.hidden || !heroVisible || pointerOverHero || focusInHero || dialog.open) return;
+  if (paused || document.hidden || document.documentElement.classList.contains("brand-intro-playing") || !heroVisible || pointerOverHero || focusInHero || dialog.open) return;
   carouselTimer = window.setInterval(() => showSlide(activeSlide + 1), 6500);
 }
 
@@ -83,6 +83,7 @@ hero.addEventListener("focusout", (event) => {
   syncCarousel();
 });
 document.addEventListener("visibilitychange", syncCarousel);
+document.addEventListener("brandintrochange", syncCarousel);
 reducedMotion.addEventListener("change", () => {
   paused = reducedMotion.matches;
   updatePauseButton();
