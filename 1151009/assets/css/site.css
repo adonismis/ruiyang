@@ -228,7 +228,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 40px;
+  padding-inline: max(30px, calc((100vw - 1380px) / 2));
   gap: 30px;
   background: #fff;
   border-bottom: 1px solid #eef0ed;
@@ -246,11 +246,12 @@ h2 {
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 0;
   height: 100%;
 }
 .desktop-nav > a {
-  font-size: 13px;
+  padding-inline: 16px;
+  font-size: 16px;
   font-weight: 500;
   position: relative;
   white-space: nowrap;
@@ -1550,15 +1551,6 @@ h2 {
 
 /* responsive.css */
 @media (min-width: 1600px) {
-  .site-header {
-    padding-inline: 64px;
-  }
-  .desktop-nav {
-    gap: 34px;
-  }
-  .desktop-nav > a {
-    font-size: 14px;
-  }
   .hero h1 {
     font-size: 80px;
   }
@@ -1571,7 +1563,7 @@ h2 {
     --header-height: 86px;
   }
   .site-header {
-    padding-inline: 40px;
+    padding-inline: 30px;
   }
   .brand {
     width: 207px;
